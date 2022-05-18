@@ -3,13 +3,13 @@ import classes from "./Header.module.css"
 
 export function Header() {
   return (
-    <heater className={classes.header}>
+    <header className={classes.header}>
       <Link href="/">
         <a className={classes.anchor}>Index</a>
       </Link>
       <Link href="/about">
       <a className={classes.anchor}>About</a>
       </Link>
-    </heater>
+    </header>
   )
 }
