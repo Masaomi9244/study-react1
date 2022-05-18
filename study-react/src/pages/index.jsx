@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import { Footer } from '../components/Footer'
 import { Main } from '../components/Main'
 import { Header } from '../components/Header'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 
 export default function Home() {
   const foo = "foo";
@@ -11,6 +11,15 @@ export default function Home() {
     e.preventDefault()
     alert(foo)
   }, [])
+
+  useEffect(() => {
+    console.log("マウント時")
+    document.body.style.backgroundColor = "lightblue"
+    return () => {
+      console.log("アンマウント時")
+      document.body.style.backgroundColor = ""
+    }
+  },[])
 
   return (
     <div className={styles.container}>
