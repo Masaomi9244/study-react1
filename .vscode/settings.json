@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
-    "rarr"
-  ]
+    "rarr",
+    "vercel"
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

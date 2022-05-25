@@ -1,4 +1,5 @@
-import classes from './Links.module.css'
+import classes from "./Links.module.css";
+import React from "react";
 
 export const Links = (props) => {
   return (
@@ -9,8 +10,8 @@ export const Links = (props) => {
             <h2 className={classes.title}>{item.title} →</h2>
             <p className={classes.description}>{item.description}</p>
           </a>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
