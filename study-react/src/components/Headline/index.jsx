@@ -1,4 +1,5 @@
-import classes from './Headline.module.css'
+import classes from "./Headline.module.css";
+import React from "react";
 
 export const Headline = (props) => {
   return (
@@ -11,5 +12,5 @@ export const Headline = (props) => {
 
       <button onClick={props.handleReduce}>減らす</button>
     </div>
-  )
-}
+  );
+};

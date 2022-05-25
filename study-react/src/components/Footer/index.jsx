@@ -1,5 +1,6 @@
-import classes from './Footer.module.css'
-import Image from 'next/image'
+import classes from "./Footer.module.css";
+import Image from "next/image";
+import React from "react";
 
 export const Footer = () => {
   return (
@@ -9,11 +10,11 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{' '}
+        Powered by{" "}
         <span className={classes.logo}>
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
       </a>
     </footer>
-  )
-}
+  );
+};
