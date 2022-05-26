@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Header } from "../components/Header";
 import { Posts } from "../components/Posts";
-import React, { useCallback, useEffect, useState } from "react";
+import React from "react";
 
 const Home = (props) => {
   return (
