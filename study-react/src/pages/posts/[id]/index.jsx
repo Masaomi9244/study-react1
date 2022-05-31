@@ -3,7 +3,7 @@ import { Header } from "src/components/Header";
 import React from "react";
 import { Post } from "src/components/post";
 
-const PostId = () => {
+const PostsId = () => {
   return (
     <div className={classes.container}>
       <Header />
@@ -12,4 +12,4 @@ const PostId = () => {
   );
 };
 
-export default PostId;
+export default PostsId;
