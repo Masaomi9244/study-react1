@@ -1,17 +1,9 @@
 .container {
-  padding: 0 2rem;
-}
-
-.listGrid {
-  display: grid;
-  justify-items: center;
-}
-.listGrid ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-.center {
-  text-align: center;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

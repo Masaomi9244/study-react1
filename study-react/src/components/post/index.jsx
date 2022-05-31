@@ -1,15 +1,14 @@
-import styles from "src/styles/Home.module.css";
 import { usePost } from "src/hooks/usePost";
 
 export const Post = () => {
   const { post, user, error, isLoading } = usePost();
 
   if (isLoading) {
-    return <div className={styles.listGrid}>ローディング中</div>;
+    return <div>ローディング中</div>;
   }
 
   if (error) {
-    return <div className={styles.listGrid}>{error.message}</div>;
+    return <div>{error.message}</div>;
   }
 
   return (

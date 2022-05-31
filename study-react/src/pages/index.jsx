@@ -10,7 +10,7 @@ const Index = () => {
         <title>IndexPage</title>
       </Head>
       <Header />
-      <div className={styles.center}>
+      <div>
         <h1>Next.jsで学ぶReact講座</h1>
         <p>JsonPlaceholderのAPIを色々叩いてみるよ!</p>
       </div>
