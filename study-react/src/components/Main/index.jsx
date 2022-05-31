@@ -1,6 +1,6 @@
-import classes from "./Main.module.css";
-import { Links } from "../Links";
-import { Headline } from "../Headline";
+import classes from "src/components/Main/main.module.css";
+import { Links } from "src/components/Links";
+import { Headline } from "src/components/Headline";
 import { React, useCallback, useState } from "react";
 
 const ITEMS = [

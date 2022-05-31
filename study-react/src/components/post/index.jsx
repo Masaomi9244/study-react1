@@ -1,5 +1,5 @@
-import styles from "../../styles/Home.module.css";
-import { usePost } from "../../hooks/usePost";
+import styles from "src/styles/Home.module.css";
+import { usePost } from "src/hooks/usePost";
 
 export const Post = () => {
   const { post, user, error, isLoading } = usePost();

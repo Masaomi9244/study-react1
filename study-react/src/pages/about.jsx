@@ -1,8 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Main } from "../components/Main";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import styles from "src/styles/Home.module.css";
+import { Main } from "src/components/Main";
+import { Header } from "src/components/Header";
+import { Footer } from "src/components/Footer";
 import React from "react";
 
 const About = (props) => {

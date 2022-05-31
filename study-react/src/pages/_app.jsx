@@ -1,8 +1,8 @@
-import "../styles/globals.css";
+import "src/styles/globals.css";
 import Head from "next/head";
-import { useCounter } from "../hooks/useCounter";
-import { useInputArray } from "../hooks/useInputArray";
-import { useBgColor } from "../hooks/useBgColor";
+import { useCounter } from "src/hooks/useCounter";
+import { useInputArray } from "src/hooks/useInputArray";
+import { useBgColor } from "src/hooks/useBgColor";
 import React from "react";
 
 const MyApp = ({ Component, pageProps }) => {

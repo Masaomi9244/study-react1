@@ -1,4 +1,4 @@
-import classes from "./Links.module.css";
+import classes from "src/components/Links/Links.module.css";
 import React from "react";
 
 export const Links = (props) => {
