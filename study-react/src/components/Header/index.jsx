@@ -4,7 +4,7 @@ import React from "react";
 
 const NAV_ITEMS = [
   { href: "/posts", label: "Posts" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "About" },
 ];
 
 export const Header = () => {
