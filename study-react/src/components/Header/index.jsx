@@ -3,8 +3,8 @@ import classes from "src/components/Header/Header.module.css";
 import React from "react";
 
 const NAV_ITEMS = [
+  { href: "/", label: "Index" },
   { href: "/posts", label: "Posts" },
-  { href: "/", label: "About" },
 ];
 
 export const Header = () => {
