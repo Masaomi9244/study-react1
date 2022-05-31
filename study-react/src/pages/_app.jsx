@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Layout } from "src/components/Layout";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -6,7 +7,9 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 };
