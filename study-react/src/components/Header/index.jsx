@@ -1,10 +1,10 @@
 import Link from "next/link";
-import classes from "./Header.module.css";
+import classes from "src/components/Header/Header.module.css";
 import React from "react";
 
 const NAV_ITEMS = [
   { href: "/", label: "Index" },
-  { href: "/about", label: "About" },
+  { href: "/posts", label: "Posts" },
 ];
 
 export const Header = () => {
