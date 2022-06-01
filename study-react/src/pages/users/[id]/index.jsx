@@ -1,5 +1,5 @@
 import { Header } from "src/components/Header";
-import { User } from "src/components/User";
+import { User } from "src/components/user";
 
 const UsersId = () => {
   return (
