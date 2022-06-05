@@ -13,7 +13,7 @@ export const useComment = () => {
   };
 
   const { data: comment, error: commentError } = useSWR(
-    `https://jsonplaceholder.typicode.com/comment/${router.query.id}`,
+    `https://jsonplaceholder.typicode.com/comments/${router.query.id}`,
     fetcher
   );
 
