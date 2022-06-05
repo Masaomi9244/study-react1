@@ -15,6 +15,7 @@ export const usePosts = () => {
     "https://jsonplaceholder.typicode.com/posts",
     fetcher
   );
+
   return {
     data,
     error,

@@ -9,14 +9,14 @@ const fetcher = async (url) => {
 };
 
 export const useComments = () => {
-  const { data: comments, error: commentsError } = useSWR(
+  const { data, error } = useSWR(
     "https://jsonplaceholder.typicode.com/comments",
     fetcher
   );
   return {
-    comments,
-    commentsError,
-    isLoading: !comments && !commentsError,
-    isEmpty: comments && comments.length === 0,
+    data,
+    error,
+    isLoading: !data && !error,
+    isEmpty: data && data.length === 0,
   };
 };

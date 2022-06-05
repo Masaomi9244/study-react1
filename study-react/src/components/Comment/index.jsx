@@ -1,10 +1,9 @@
 import { useComment } from "src/hooks/useComment";
 
 export const Comment = () => {
-  const { comment, commentError, isLoading, isEmpty } = useComment();
-
-  if (commentError) {
-    return <div>{error.massage}</div>;
+  const { data, error, isLoading, isEmpty } = useComment();
+  if (error) {
+    return <div>{error.message}</div>;
   }
 
   if (isLoading) {
@@ -17,7 +16,7 @@ export const Comment = () => {
 
   return (
     <div>
-      <h1>{comment.body}</h1>
+      <h1>{data.body}</h1>
     </div>
   );
 };

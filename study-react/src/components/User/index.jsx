@@ -1,7 +1,7 @@
 import { useUser } from "src/hooks/useUser";
 
 export const User = () => {
-  const { user, error, isLoading } = useUser();
+  const { data, error, isLoading, isEmpty } = useUser();
 
   if (isLoading) {
     return <div>ローディング中</div>;
@@ -11,10 +11,14 @@ export const User = () => {
     return <div>{error.message}</div>;
   }
 
+  if (isEmpty) {
+    return <div>データは空です</div>;
+  }
+
   return (
     <div>
-      <h1>{user?.name}</h1>
-      <p>{user?.email}</p>
+      <h1>{data?.name}</h1>
+      <p>{data?.email}</p>
     </div>
   );
 };

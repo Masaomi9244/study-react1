@@ -3,6 +3,7 @@ import useSWR from "swr";
 
 export const useComment = () => {
   const router = useRouter();
+
   const fetcher = async (url) => {
     const response = await fetch(url);
     if (!response.ok) {
@@ -12,15 +13,17 @@ export const useComment = () => {
     return response.json();
   };
 
-  const { data: comment, error: commentError } = useSWR(
-    `https://jsonplaceholder.typicode.com/comments/${router.query.id}`,
+  const { data, error } = useSWR(
+    router.query.id
+      ? `https://jsonplaceholder.typicode.com/comments/${router.query.id}`
+      : null,
     fetcher
   );
 
   return {
-    comment,
-    commentError,
-    isLoading: !comment && !error,
-    isEmpty: comment && comment.length > 0,
+    data,
+    error,
+    isLoading: !data && !error,
+    isEmpty: data && data.length === 0,
   };
 };

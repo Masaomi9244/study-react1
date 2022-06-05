@@ -3,6 +3,7 @@ import useSWR from "swr";
 
 export const useUser = () => {
   const router = useRouter();
+
   const fetcher = async (url) => {
     const response = await fetch(url);
     if (!response.ok) {
@@ -11,7 +12,7 @@ export const useUser = () => {
     return response.json();
   };
 
-  const { data: user, error: userError } = useSWR(
+  const { data, error } = useSWR(
     router.query.id
       ? `https://jsonplaceholder.typicode.com/users/${router.query.id}`
       : null,
@@ -19,8 +20,9 @@ export const useUser = () => {
   );
 
   return {
-    user,
-    error: userError,
-    isLoading: !user && !userError,
+    data,
+    error,
+    isLoading: !data && !error,
+    isEmpty: data && data.length === 0,
   };
 };
