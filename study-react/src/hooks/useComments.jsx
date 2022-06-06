@@ -5,21 +5,18 @@ const fetcher = async (url) => {
   if (!response.ok) {
     throw new Error("エラーが発生したため、データの取得に失敗しました");
   }
-
-  const json = await response.json();
-  return json;
+  return response.json();
 };
 
-export const usePosts = () => {
+export const useComments = () => {
   const { data, error } = useSWR(
-    "https://jsonplaceholder.typicode.com/posts",
+    "https://jsonplaceholder.typicode.com/comments",
     fetcher
   );
-
   return {
     data,
     error,
-    isLoading: !error && !data,
+    isLoading: !data && !error,
     isEmpty: data && data.length === 0,
   };
 };

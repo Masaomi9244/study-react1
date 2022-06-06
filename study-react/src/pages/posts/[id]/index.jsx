@@ -1,6 +1,6 @@
 import { Header } from "src/components/Header";
 import React from "react";
-import { Post } from "src/components/post";
+import { Post } from "src/components/Post";
 
 const PostsId = () => {
   return (

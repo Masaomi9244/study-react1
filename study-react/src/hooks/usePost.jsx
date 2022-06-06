@@ -27,7 +27,6 @@ export const usePost = () => {
     fetcher
   );
 
-  console.log(post, user);
   return {
     post,
     user,
