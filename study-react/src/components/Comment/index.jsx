@@ -17,6 +17,10 @@ export const Comment = () => {
   return (
     <div>
       <h1>{data.body}</h1>
+      <ul>
+        <li>{data.name}</li>
+        <li>{data.email}</li>
+      </ul>
     </div>
   );
 };
