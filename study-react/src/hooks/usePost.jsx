@@ -1,9 +1,6 @@
 import useSWR from "swr";
-import { useRouter } from "next/router";
 
-export const usePost = () => {
-  const router = useRouter();
-
+export const usePost = (id) => {
   const fetcher = async (url) => {
     const response = await fetch(url);
     if (!response.ok) {
@@ -15,9 +12,7 @@ export const usePost = () => {
   };
 
   const { data, error } = useSWR(
-    router.query.id
-      ? `https://jsonplaceholder.typicode.com/posts/${router.query.id}`
-      : null,
+    id ? `https://jsonplaceholder.typicode.com/posts/${id}` : null,
     fetcher
   );
 
