@@ -1,9 +1,6 @@
 import useSWR from "swr";
-import { useRouter } from "next/router";
 
-export const usePost = () => {
-  const router = useRouter();
-
+export const UserByUserId = (props) => {
   const fetcher = async (url) => {
     const response = await fetch(url);
     if (!response.ok) {
@@ -15,15 +12,17 @@ export const usePost = () => {
   };
 
   const { data, error } = useSWR(
-    router.query.id
-      ? `https://jsonplaceholder.typicode.com/posts/${router.query.id}`
-      : null,
+    props.id ? `https://jsonplaceholder.typicode.com/users/${props.id}` : null,
     fetcher
   );
 
-  return {
-    data,
-    error,
-    isLoading: !data && !error,
-  };
+  if (!data && !error) {
+    return <div>ローディング中</div>;
+  }
+
+  if (error) {
+    return <div>{error.message}</div>;
+  }
+
+  return <div>Created by {data.name}</div>;
 };

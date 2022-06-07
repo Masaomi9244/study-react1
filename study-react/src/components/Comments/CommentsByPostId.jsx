@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { useComments } from "src/hooks/useFetchArray";
+import { useCommentsByPostId } from "src/hooks/useFetchArray";
 
-export const Comments = () => {
-  const { data, error, isLoading, isEmpty } = useComments();
+export const CommentsByPostId = (props) => {
+  const { data, error, isLoading, isEmpty } = useCommentsByPostId(props.id);
+
   if (error) {
     return <div>{error.message}</div>;
   }
