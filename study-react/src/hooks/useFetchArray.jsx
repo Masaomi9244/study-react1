@@ -2,6 +2,7 @@ import useSWR from "swr";
 
 const fetcher = async (url) => {
   const response = await fetch(url);
+
   if (!response.ok) {
     throw new Error("エラーが発生したため、データの取得に失敗しました");
   }
@@ -10,6 +11,7 @@ const fetcher = async (url) => {
 
 const useFetchArray = (url) => {
   const { data, error } = useSWR(url, fetcher);
+
   return {
     data,
     error,
@@ -30,4 +32,8 @@ export const useUsers = () => {
 
 export const useComments = () => {
   return useFetchArray(`${API_URL}/comments`);
+};
+
+export const useCommentsByPostId = (id) => {
+  return useFetchArray(id ? `${API_URL}/comments?postId=${id}` : null);
 };
