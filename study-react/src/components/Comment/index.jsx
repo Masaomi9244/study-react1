@@ -1,5 +1,5 @@
 import { useComment } from "src/hooks/useComment";
-import { PostByCommentId } from "../Post/PostByCommentId";
+import { PostByCommentId } from "src/components/Post/PostByCommentId";
 
 export const Comment = () => {
   const { data, error, isLoading, isEmpty } = useComment();
