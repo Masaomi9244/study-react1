@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { usePost } from "src/hooks/usePost";
-import { CommentsByPostId } from "../Comments/CommentsByPostId";
-import { UserByUserId } from "../User/UserByUserId";
+import { CommentsByPostId } from "src/components/Comments/CommentsByPostId";
+import { UserByUserId } from "src/components/User/UserByUserId";
 
 export const Post = () => {
   const router = useRouter();

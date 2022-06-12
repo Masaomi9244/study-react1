@@ -1,5 +1,5 @@
 import { useUser } from "src/hooks/useUser";
-import { PostsByUserId } from "../Posts/PostsByUserId";
+import { PostsByUserId } from "src/components/Posts/PostsByUserId";
 
 export const User = () => {
   const { data, error, isLoading, isEmpty } = useUser();
