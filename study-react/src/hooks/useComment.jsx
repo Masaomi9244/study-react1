@@ -6,7 +6,7 @@ export const useComment = () => {
   const router = useRouter();
 
   const { data, error } = useSWR(
-    router.query.id ? `${API_URL}/${router.query.id}` : null
+    router.query.id ? `${API_URL}/comments/${router.query.id}` : null
   );
 
   return {

@@ -24,6 +24,7 @@ export const getStaticProps = async (ctx) => {
   if (!comment.ok) {
     return {
       notFound: true,
+      revalidate: 1,
     };
   }
   const commentData = await comment.json();
@@ -34,6 +35,7 @@ export const getStaticProps = async (ctx) => {
         [COMMENT_API_URL]: commentData,
       },
     },
+    revalidate: 1,
   };
 };
 
