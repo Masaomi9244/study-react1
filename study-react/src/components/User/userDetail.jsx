@@ -1,8 +1,13 @@
-import { useUser } from "src/hooks/useUser";
-import { PostsByUserId } from "src/components/Posts/PostsByUserId";
+import { PostListByUserId } from "src/components/Post/PostListByUserId";
+import { useRouter } from "next/router";
+import { useFetch } from "src/hooks/useFetch";
+import { API_URL } from "src/utils/const";
 
-export const User = () => {
-  const { data, error, isLoading, isEmpty } = useUser();
+export const UserDetail = () => {
+  const router = useRouter();
+  const { data, error, isLoading, isEmpty } = useFetch(
+    router.query.id ? `${API_URL}/users/${router.query.id}` : null
+  );
 
   if (isLoading) {
     return <div>ローディング中</div>;
@@ -30,7 +35,7 @@ export const User = () => {
       </ul>
       <h2 className="text-xl font-bold mt-10">投稿</h2>
       <div className="mt-2"></div>
-      <PostsByUserId id={data.id} />
+      <PostListByUserId id={data.id} />
     </div>
   );
 };
